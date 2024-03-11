@@ -73,8 +73,8 @@ public class CalculatorServiceImplTest {
 
     @Test
     public void divideTestOne() {
-        int num1 = 33;
-        int num2 = 11;
+        double num1 = 33;
+        double num2 = 11;
         String expected = "33.0 / 11.0 = 3.0";
         String actual = calculatorService.divide(num1, num2);
 
@@ -83,8 +83,8 @@ public class CalculatorServiceImplTest {
 
     @Test
     public void divideTestTwo() {
-        int num1 = 2;
-        int num2 = 0;
+        double num1 = 2;
+        double num2 = 0;
 
         try {
             calculatorService.divide(num1, num2);
