@@ -1,31 +1,32 @@
-package pro.sky.java.course2.calculator.service;
+package pro.sky.java.course2.calculator;
 
 import org.junit.jupiter.api.Test;
 import pro.sky.java.course2.calculator.exceptions.DivisionByZeroException;
+import pro.sky.java.course2.calculator.service.CalculatorServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class CalculatorServiceImplTest {
+public class CalculatorServiceTest {
     CalculatorServiceImpl calculatorService = new CalculatorServiceImpl();
     @Test
     public void plusTestOne() {
-        int num1 = 5;
-        int num2 = 3;
+        double num1 = 5;
+        double num2 = 3;
 
-        String expected = "5 + 3 = 8";
-        String actual = calculatorService.plus(num1, num2);
+        double actual = calculatorService.plus(num1, num2);
+        double expected = 8;
 
         assertEquals(actual, expected);
     }
 
     @Test
     public void plusTestTwo() {
-        int num1 = 2;
-        int num2 = 0;
+        double num1 = 2;
+        double num2 = 0;
 
-        String expected = "2 + 0 = 2";
-        String actual = calculatorService.plus(num1, num2);
+        double actual = calculatorService.plus(num1, num2);
+        double expected = 2;
 
         assertEquals(actual, expected);
     }
@@ -35,18 +36,19 @@ public class CalculatorServiceImplTest {
         int num1 = 5;
         int num2 = 3;
 
-        String expected = "5 - 3 = 2";
-        String actual = calculatorService.minus(num1, num2);
+        double actual = calculatorService.minus(num1, num2);
+        double expected = 2;
 
         assertEquals(actual, expected);
     }
 
     @Test
     public void minusTestTwo() {
-        int num1 = 0;
-        int num2 = 5;
-        String expected = "0 - 5 = -5";
-        String actual = calculatorService.minus(num1, num2);
+        double num1 = 0;
+        double num2 = 5;
+
+        double actual = calculatorService.minus(num1, num2);
+        double expected = -5;
 
         assertEquals(actual, expected);
     }
@@ -55,8 +57,9 @@ public class CalculatorServiceImplTest {
     public void multiplyTestOne() {
         int num1 = 0;
         int num2 = 11;
-        String expected = "0 * 11 = 0";
-        String actual = calculatorService.multiply(num1, num2);
+
+        double actual = calculatorService.multiply(num1, num2);
+        double expected = 0;
 
         assertEquals(actual, expected);
     }
@@ -65,8 +68,9 @@ public class CalculatorServiceImplTest {
     public void multiplyTestTwo() {
         int num1 = 23;
         int num2 = 32;
-        String expected = "23 * 32 = 736";
-        String actual = calculatorService.multiply(num1, num2);
+
+        double actual = calculatorService.multiply(num1, num2);
+        double expected = 736;
 
         assertEquals(actual, expected);
     }
@@ -75,8 +79,9 @@ public class CalculatorServiceImplTest {
     public void divideTestOne() {
         double num1 = 33;
         double num2 = 11;
-        String expected = "33.0 / 11.0 = 3.0";
-        String actual = calculatorService.divide(num1, num2);
+
+        double expected = 3;
+        double actual = calculatorService.divide(num1, num2);
 
         assertEquals(actual, expected);
     }

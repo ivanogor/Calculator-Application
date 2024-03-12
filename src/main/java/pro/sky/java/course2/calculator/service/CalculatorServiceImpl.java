@@ -11,27 +11,23 @@ public class CalculatorServiceImpl implements CalculatorService{
     }
 
     @Override
-    public String plus(int num1, int num2) {
-        int result = num1 + num2;
-        return num1 + " + " + num2 + " = " + result;
+    public double plus(double num1, double num2) {
+        return num1 + num2;
     }
     @Override
-    public String minus(int num1, int num2) {
-        int result = num1 - num2;
-        return num1 + " - " + num2 + " = " + result;
+    public double minus(double num1, double num2) {
+        return num1 - num2;
     }
 
     @Override
-    public String multiply(int num1, int num2) {
-        int result = num1 * num2;
-        return num1 + " * " + num2 + " = " + result;
+    public double multiply(double num1, double num2) {
+        return num1 * num2;
     }
 
     @Override
-    public String divide(double num1, double num2) {
+    public double divide(double num1, double num2) {
         if (num2 != 0){
-            double result = num1 / num2;
-            return num1 + " / " + num2 + " = " + result;
+            return num1 / num2;
         }
         else {
             throw new DivisionByZeroException("Деление на ноль.");
