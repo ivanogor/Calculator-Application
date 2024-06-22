@@ -17,5 +17,5 @@ This project is a simple calculator application designed to help me practice wri
 - **Spring Boot Starter Test**
 ## Prerequisites
 
-- Java 11 or later
+- Java 17
 - Maven or Gradle
